@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Ivan Urban](https://up.htmlacademy.ru/htmlcss/29/user/1403619).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Минакин](https://htmlacademy.ru/profile/id955551).
 
 ---
 
