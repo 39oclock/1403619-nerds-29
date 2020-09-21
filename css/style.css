@@ -130,25 +130,25 @@ img {
 .slider .slider1{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url(img/slider1.png) no-repeat right;
+    background: var(--basic-extra-light) url(../img/slider1.png) no-repeat right;
 }
 
 .slider .slider2{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url(img/slider2.png) no-repeat right;
+    background: var(--basic-extra-light) url(../img/slider2.png) no-repeat right;
 }
 
 .slider .slider3{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url(img/slider3.png) no-repeat right;
+    background: var(--basic-extra-light) url(../img/slider3.png) no-repeat right;
 }
 
 /* Buttons */
 
 .button {
-    font: 16px;
+    font-size: 16px;
     text-transform: uppercase;
     text-align: center;
     color: var(--basic-white);
@@ -167,11 +167,10 @@ img {
 .button:active {
     background-color: var(--special-red-active);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-    color: rgba(255,255,255,0.3) !important;
+    color: rgba(255,255,255,0.3);
 }
 
 .button-green {
-    font: 16px;
     text-transform: uppercase;
     text-align: center;
     color: var(--basic-white);
@@ -190,11 +189,10 @@ img {
 .button-green:active {
     background-color: var(--special-green-active);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-    color: rgba(255,255,255,0.3) !important;
+    color: rgba(255,255,255,0.3);
 }
 
 .button-yellow {
-    font: 16px;
     text-transform: uppercase;
     text-align: center;
     color: var(--basic-white);
@@ -213,7 +211,7 @@ img {
 .button-yellow:active {
     background-color: var(--special-yellow-active);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-    color: rgba(255,255,255,0.3) !important;
+    color: rgba(255,255,255,0.3);
 }
 
 /* Services */
@@ -246,11 +244,6 @@ img {
     width: 300px;
     height: auto;
     margin: 80px 0;
-}
-
-.services-wrapper li {
-    width: 33.3%;
-    float: left;
 }
 
 /* Visually hidden */
@@ -383,8 +376,6 @@ img {
 }
 
 .contact-details {
-    width: 318px;
-    height: 308px;
     background: var(--basic-white);
     text-align: center;
     vertical-align: middle;
