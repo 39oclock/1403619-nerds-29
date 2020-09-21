@@ -50,8 +50,6 @@ img {
 /* Main navigation */
 
 .main-navigation {
-  font-size: 16px;
-  line-height: 20px;
   color: var(--basic-black);
   background-color: transparent;
 }
@@ -62,7 +60,7 @@ img {
 }
 
 .site-navigation a {
-  color: var(--basic-black);
+    color: var(--basic-black);
   text-transform: uppercase;
 }
 
@@ -74,7 +72,6 @@ img {
 .site-navigation a:active {
   color: var(--basic-black);
   opacity: 0.5;
-  text-transform: uppercase;
 }
 
 .basket-link {
@@ -84,12 +81,10 @@ img {
 
 .basket-link:hover {
     color: var(--basic-red);
-    text-transform: uppercase;
 }
 
 .basket-link:active {
     color: var(--basic-black);
-    text-transform: uppercase;
     opacity: 0.5;
 }
 
@@ -130,30 +125,26 @@ img {
 .slider .slider1{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url(img/slider1.png) no-repeat right;
+    background: var(--basic-extra-light) url("img/slider1.png") no-repeat right;
 }
 
 .slider .slider2{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url(img/slider2.png) no-repeat right;
+    background: var(--basic-extra-light) url("img/slider2.png") no-repeat right;
 }
 
 .slider .slider3{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url(img/slider3.png) no-repeat right;
+    background: var(--basic-extra-light) url("img/slider3.png") no-repeat right;
 }
 
 /* Buttons */
 
 .button {
-    font: 16px;
     text-transform: uppercase;
-    text-align: center;
     color: var(--basic-white);
-    vertical-align: middle;
-    text-transform: uppercase;
     background-color: var(--basic-red);
     border: none;
     padding: 17px 40px;
@@ -167,15 +158,11 @@ img {
 .button:active {
     background-color: var(--special-red-active);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-    color: rgba(255,255,255,0.3) !important;
+    color: rgba(255,255,255,0.3);
 }
 
 .button-green {
-    font: 16px;
-    text-transform: uppercase;
-    text-align: center;
     color: var(--basic-white);
-    vertical-align: middle;
     text-transform: uppercase;
     background-color: var(--basic-green);
     border: none;
@@ -190,16 +177,13 @@ img {
 .button-green:active {
     background-color: var(--special-green-active);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-    color: rgba(255,255,255,0.3) !important;
+    color: rgba(255,255,255,0.3);
 }
 
 .button-yellow {
-    font: 16px;
     text-transform: uppercase;
-    text-align: center;
     color: var(--basic-white);
     vertical-align: middle;
-    text-transform: uppercase;
     background-color: var(--basic-yellow);
     border: none;
     padding: 17px 40px;
@@ -213,7 +197,7 @@ img {
 .button-yellow:active {
     background-color: var(--special-yellow-active);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-    color: rgba(255,255,255,0.3) !important;
+    color: rgba(255,255,255,0.3);
 }
 
 /* Services */
@@ -246,11 +230,6 @@ img {
     width: 300px;
     height: auto;
     margin: 80px 0;
-}
-
-.services-wrapper li {
-    width: 33.3%;
-    float: left;
 }
 
 /* Visually hidden */
@@ -356,12 +335,8 @@ img {
 /* Контакты */
 
 .map {
-    width: 100%;
-    height: 416px;
     background-color: var(--basic-neutral);
-    text-align: center;
-    vertical-align: middle;
-    padding: 50px 0;
+    margin: 80px 0;
 }
 
 .contact-details h3 {
@@ -383,13 +358,7 @@ img {
 }
 
 .contact-details {
-    width: 318px;
-    height: 308px;
-    background: var(--basic-white);
-    text-align: center;
-    vertical-align: middle;
-    margin: 0 0;
-    padding: 50px;
+    background-color: var(--basic-white);
 }
 
 /* Main footer */
