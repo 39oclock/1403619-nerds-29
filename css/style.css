@@ -125,19 +125,19 @@ img {
 .slider .slider1{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url("img/slider1.png") no-repeat right;
+    background: var(--basic-extra-light) url("../img/slider1.png") no-repeat right;
 }
 
 .slider .slider2{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url("img/slider2.png") no-repeat right;
+    background: var(--basic-extra-light) url("../img/slider2.png") no-repeat right;
 }
 
 .slider .slider3{
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url("img/slider3.png") no-repeat right;
+    background: var(--basic-extra-light) url("../img/slider3.png") no-repeat right;
 }
 
 /* Buttons */
