@@ -417,6 +417,11 @@ img {
     padding: 17px 20px;
 }
 
+.page-title  {
+    font-size: 55px;
+    font-weight: 500;
+}
+
 /*Products */
 
 
@@ -447,4 +452,42 @@ img {
 .button.price {
     padding: 17px 72px;
     margin-bottom: 44px;
+}
+
+/* Filters */
+
+.filter legend {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.filter label {
+    color: #283136;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.catalog-category {
+  text-transform: none;
+}
+
+.filter-button.button {
+    color: #000000;
+    background-color: var(--basic-extra-light);
+    padding: 17px 89px 15px 88px;
+}
+
+.filter-button.button:hover {
+    color: #000000;
+    background-color: #DFDFDF;
+}
+
+.filter-button.button:active {
+    background-color: #D5D5D5;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border-radius: 3px;
+    color: rgba(1, 1, 1, 0.3);
 }

@@ -22,18 +22,64 @@
                 <a class="basket-link" href="blank.html">Корзина</a>
             </nav>
         </header>
-        <main>
-            <section class="hero-image">
-                <h1>Магазин готовых шаблонов<span class="visually-hidden">для сайта</span></h1>
+        <main class="page-catalog container">
+                <h2 class="page-title">Магазин готовых шаблонов</h2>
+            <section class="filters">
+                <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset>
+                        <legend>Стоимость:</legend>
+                        <input value="0" min="0" max="15000" step="10" type="range"/>
+                        <input type="number" value="0" min="0" max="15000" name="price-from" id="price-from">
+                        <label for"price-from">От</label>
+                        <input type="number" value="15000" min="0" max="15000" name="price-to" id="price-to">
+                        <label for"price-to">До</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Сетка:</legend>
+                        <ul>
+                            <li class="filter-option filter-radio">
+                                <input class="filter-input-radio filter-input" type="radio" name="grid" value="adaptive" id="grid-adaptive">
+                                <label for="grid-adaptive">Адаптивная</label>
+                            </li>
+                            <li class="filter-option filter-radio">
+                                <input class="filter-input-radio filter-input" type="radio" name="grid" value="fixed" id="grid-fixed">
+                                <label for="grid-fixed">Фиксированная</label>
+                            </li>
+                            <li class="filter-option filter-radio">
+                                <input class="filter-input-radio filter-input" type="radio" name="grid" value="rubber" id="grid-rubber">
+                                <label for="grid-rubber">Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Особенности:</legend>
+                        <ul>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-slider" checked>
+                                <label for="advantage-slider"></label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-block">
+                                <label for="advantage-blockr"></label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-news" checked>
+                                <label for="advantage-news"></label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-gallery">
+                                <label for="advantage-gallery"></label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-basket">
+                                <label for="feature-basket"></label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="filter-button button">Показать</button>
+                </form>
             </section>
-            <section class="filter price">
-                <h3>Cтоимость</h3>
-                <!-- Здесь будет форма фильтра -->
-            </section>
-            <section class="filter sort">
-                <h3>Сортировать</h3>
-                <!-- Здесь будет форма фильтра для сортировки товара -->
-            </section>
+
             <section class="products">
                 <h2 class="visually-hidden">Список шаблонов для сайта</h2>
                 <ul class="products-list">
