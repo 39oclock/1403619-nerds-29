@@ -8,75 +8,156 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header class="main-header">
+        <header class="page-header">
             <nav class="main-navigation">
-                <a href="index.html" class="main-header-logo">
-                    <img src="img/nerds-logo.svg" width="160" height="65" alt="">
-                </a>
-                <ul class="site-navigation">
-                    <li><a href="blank.html">Студия</a></li>
-                    <li><a href="blank.html">Клиенты</a></li>
-                    <li><a>Магазин</a></li>
-                    <li><a href="blank.html">Контакты</a></li>
-                </ul>
-                <a class="basket-link" href="blank.html">Корзина</a>
+                <div class="main-navigation-wrapper">
+                    <a class="main-header-logo" href="index.html">
+                        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нердс">
+                    </a>
+                    <div class="main-header-bar">
+                        <ul class="site-navigation">
+                            <li class="site-navigation-item"><a href="blank.html">Студия</a></li>
+                            <li class="site-navigation-item"><a href="blank.html">Клиенты</a></li>
+                            <li class="site-navigation-item"><a>Магазин</a></li>
+                            <li class="site-navigation-item"><a href="blank.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="basket-navigation">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="#A6A6A6"/>
+                        <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="#A6A6A6"/>
+                        <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="#A6A6A6"/>
+                        </svg>
+                        <a class="basket-link" href="blank.html">Корзина</a>
+                    </div>
+                </div>
             </nav>
         </header>
-        <main>
-            <section class="hero-image">
-                <h1>Магазин готовых шаблонов<span class="visually-hidden">для сайта</span></h1>
+        <main class="page-catalog container">
+                <h2 class="page-title">Магазин готовых шаблонов</h2>
+            <section class="filters">
+                <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset>
+                        <legend>Стоимость:</legend>
+                        <input value="0" min="0" max="15000" step="10" type="range"/>
+                        <input type="number" value="0" min="0" max="15000" name="price-from" id="price-from">
+                        <label for"price-from">От</label>
+                        <input type="number" value="15000" min="0" max="15000" name="price-to" id="price-to">
+                        <label for"price-to">До</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Сетка:</legend>
+                        <ul>
+                            <li class="filter-option filter-radio">
+                                <input class="filter-input-radio filter-input" type="radio" name="grid" value="adaptive" id="grid-adaptive">
+                                <label for="grid-adaptive">Адаптивная</label>
+                            </li>
+                            <li class="filter-option filter-radio">
+                                <input class="filter-input-radio filter-input" type="radio" name="grid" value="fixed" id="grid-fixed">
+                                <label for="grid-fixed">Фиксированная</label>
+                            </li>
+                            <li class="filter-option filter-radio">
+                                <input class="filter-input-radio filter-input" type="radio" name="grid" value="rubber" id="grid-rubber">
+                                <label for="grid-rubber">Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Особенности:</legend>
+                        <ul>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-slider" checked>
+                                <label for="advantage-slider"></label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-block">
+                                <label for="advantage-blockr"></label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-news" checked>
+                                <label for="advantage-news"></label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-gallery">
+                                <label for="advantage-gallery"></label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-basket">
+                                <label for="feature-basket"></label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="filter-button button">Показать</button>
+                </form>
             </section>
-            <section class="filter price">
-                <h3>Cтоимость</h3>
-                <!-- Здесь будет форма фильтра -->
-            </section>
-            <section class="filter sort">
-                <h3>Сортировать</h3>
-                <!-- Здесь будет форма фильтра для сортировки товара -->
-            </section>
+
             <section class="products">
                 <h2 class="visually-hidden">Список шаблонов для сайта</h2>
                 <ul class="products-list">
                     <li class="products-item">
-                        <a href="#">
-                            <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
-                            <img src="img/product-sedona.jpg" width="360" height="580" alt="Шаблон сайта «‎Sedona»">
-                        </a>
+                        <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
+                        <img src="img/product-sedona.jpg" width="360" height="580" alt="Шаблон сайта «‎Sedona»">
+                        <div class="product-info">
+                            <h3>Sedona</h3>
+                            <p>Информационный сайт<br> 
+                            для туристов</p>
+                            <a href="#" class="button price">9 900 ₽</a>
+                        </div>
                     </li>
                     <li class="products-item">
-                        <a href="#">
-                            <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
-                            <img src="img/product-pink.jpg" width="360" height="580" alt="Шаблон сайта «‎Pink»">
-                        </a>
+                        <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
+                        <img src="img/product-pink.jpg" width="360" height="580" alt="Шаблон сайта «‎Pink»">
+                        <div class="product-info">
+                            <h3>Pink App</h3>
+                            <p>Продуктовый лендинг <br>
+                            приложения для iOS и Android</p>
+                            <a href="#" class="button price">9 900 ₽</a>
+                        </div>
                     </li>
                     <li class="products-item">
-                        <a href="#">
-                            <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
-                            <img src="img/product-barbershop.jpg" width="360" height="580" alt="Шаблон сайта «‎Borodinski»">
-                        </a>
+                        <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
+                        <img src="img/product-barbershop.jpg" width="360" height="580" alt="Шаблон сайта «‎Borodinski»">
+                        <div class="product-info">
+                            <h3>Barbershop</h3>
+                            <p>Сайт салона красоты.<br>
+ Для мужчин, да.</p>
+                            <a href="#" class="button price">9 900 ₽</a>
+                        </div>
                     </li>
                     <li class="products-item">
-                        <a href="#">
-                            <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
-                            <img src="img/product-mishka.jpg" width="360" height="580" alt="Шаблон сайта «‎Mishka»">
-                        </a>
+                        <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
+                        <img src="img/product-mishka.jpg" width="360" height="580" alt="Шаблон сайта «‎Mishka»">
+                        <div class="product-info">
+                            <h3>Mishka</h3>
+                            <p>Интернет-магазин<br>
+ вязаных игрушек</p>
+                            <a href="#" class="button price">9 900 ₽</a>
+                        </div>
                     </li>
                     <li class="products-item">
-                        <a href="#">
-                            <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
-                            <img src="img/product-school.jpg" width="360" height="580" alt="Шаблон сайта «‎School»">
-                        </a>
+                        <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
+                        <img src="img/product-a-plus.jpg" width="360" height="580" alt="Шаблон сайта «‎School»">
+                        <div class="product-info">
+                            <h3>A Plus</h3>
+                            <p>Лендинг курсов<br>
+повышения квалификации</p>
+                            <a href="#" class="button price">9 900 ₽</a>
+                        </div>
                     </li>
                     <li class="products-item">
-                        <a href="#">
-                            <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
-                            <img src="img/product-kwas.jpg" width="360" height="580" alt="Шаблон сайта «‎Kwas»">
-                        </a>
+                        <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
+                        <img src="img/product-kwast.jpg" width="360" height="580" alt="Шаблон сайта «‎Kwas»">
+                        <div product-info>
+                            <h3>Кваст</h3>
+                            <p>Промо-сайт производителя <br>
+крафтового кваса</p>
+                            <a href="#" class="button price">9 900 ₽</a>
+                        </div>
                     </li>
                 </ul>
                 <div class="pagination">
                     <ul class="pagination-list">
-                        <li class="pagination-item">
+                        <li class="pagination-item-current">
                             <a>1</a>
                         </li>
                         <li class="pagination-item">
@@ -92,8 +173,24 @@
                 </div>
             </section>
         </main>
-        <footer class="main-footer">
-                <section>
+        <div class="map">
+            <div class="container">
+                <div class="map-wrapper">
+                    <section class="contact-details">
+                        <h2 class="visually-hidden">Контакты</h2>
+                        <h3>Nerds design studio</h3>
+                        <p>191186, Санкт-Петербург,<br>
+ ул. Б. Конюшенная, д. 19/8<br>
+<br>
+    тел. <a href="tel:+78122757575" id="tel">+7 (812) 275-75-75</a></p>
+                        <a class="button">Напишите нам</a>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer main-footer">
+            <div class="container">
+                <section class="social-media">
                     <h2 class="visually-hidden">Социальные сети</h2>
                     <ul class="social-icons-list">
                         <li class="social-icon-item">
@@ -107,12 +204,13 @@
                         </li>
                     </ul>
                 </section>
-            <section>
-                <h3>Давайте дружить, это выгодно!</h3>
-                <p>Скидка 10% для друзей из социальных сетей.</p>
-            </section>
+                <section class="promo">
+                    <h3>Давайте дружить, это выгодно!</h3>
+                    <p>Скидка 10% для друзей из социальных сетей.</p>
+                </section>
+            </div>
         </footer>
-        <section>
+        <section class="visually-hidden">
             <h2>Напишите нам</h2>
             <!-- Здесь будет форма логина -->
             <button type="button">Закрыть</button>
