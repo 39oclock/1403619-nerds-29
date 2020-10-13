@@ -8,7 +8,7 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header class="page-header">
+        <header class="main-header">
             <nav class="main-navigation">
                 <div class="main-navigation-wrapper">
                     <a class="main-header-logo" href="index.html">
@@ -18,7 +18,7 @@
                         <ul class="site-navigation">
                             <li class="site-navigation-item"><a href="blank.html">Студия</a></li>
                             <li class="site-navigation-item"><a href="blank.html">Клиенты</a></li>
-                            <li class="site-navigation-item"><a>Магазин</a></li>
+                            <li class="site-navigation-item current"><a>Магазин</a></li>
                             <li class="site-navigation-item"><a href="blank.html">Контакты</a></li>
                         </ul>
                     </div>
@@ -34,10 +34,10 @@
             </nav>
         </header>
         <main class="page-catalog container">
-                <h2 class="page-title">Магазин готовых шаблонов</h2>
+            <h2 class="page-title">Магазин готовых шаблонов</h2>
             <section class="filters">
                 <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-                    <fieldset>
+                    <fieldset class="price">
                         <legend>Стоимость:</legend>
                         <input value="0" min="0" max="15000" step="10" type="range"/>
                         <input type="number" value="0" min="0" max="15000" name="price-from" id="price-from">
@@ -45,7 +45,7 @@
                         <input type="number" value="15000" min="0" max="15000" name="price-to" id="price-to">
                         <label for"price-to">До</label>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="grid-type">
                         <legend>Сетка:</legend>
                         <ul>
                             <li class="filter-option filter-radio">
@@ -67,28 +67,36 @@
                         <ul>
                             <li class="filter-option filter-checkbox">
                                 <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-slider" checked>
-                                <label for="advantage-slider"></label>
+                                <label for="advantage-slider">Слайдер</label>
                             </li>
                             <li class="filter-option filter-checkbox">
                                 <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-block">
-                                <label for="advantage-blockr"></label>
+                                <label for="advantage-blockr">Блок преимущества</label>
                             </li>
                             <li class="filter-option filter-checkbox">
                                 <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-news" checked>
-                                <label for="advantage-news"></label>
+                                <label for="advantage-news">Новости</label>
                             </li>
                             <li class="filter-option filter-checkbox">
                                 <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-gallery">
-                                <label for="advantage-gallery"></label>
+                                <label for="advantage-gallery">Галерея</label>
                             </li>
                             <li class="filter-option filter-checkbox">
                                 <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-basket">
-                                <label for="feature-basket"></label>
+                                <label for="feature-basket">Корзина</label>
                             </li>
                         </ul>
                     </fieldset>
                     <button type="submit" class="filter-button button">Показать</button>
                 </form>
+            </section>
+            <section class="sort">
+                <h3>Сортировать:</h3>
+                <ul class="sort-list">
+                    <li><a>По цене</a></li>
+                    <li><a href="#">По типу</a></li>
+                    <li><a href="#">По названию</a></li>
+                </ul>
             </section>
 
             <section class="products">
@@ -97,7 +105,7 @@
                     <li class="products-item">
                         <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
                         <img src="img/product-sedona.jpg" width="360" height="580" alt="Шаблон сайта «‎Sedona»">
-                        <div class="product-info">
+                        <div class="product-info visually-hidden">
                             <h3>Sedona</h3>
                             <p>Информационный сайт<br> 
                             для туристов</p>
@@ -107,7 +115,7 @@
                     <li class="products-item">
                         <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
                         <img src="img/product-pink.jpg" width="360" height="580" alt="Шаблон сайта «‎Pink»">
-                        <div class="product-info">
+                        <div class="product-info visually-hidden">
                             <h3>Pink App</h3>
                             <p>Продуктовый лендинг <br>
                             приложения для iOS и Android</p>
@@ -117,7 +125,7 @@
                     <li class="products-item">
                         <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
                         <img src="img/product-barbershop.jpg" width="360" height="580" alt="Шаблон сайта «‎Borodinski»">
-                        <div class="product-info">
+                        <div class="product-info visually-hidden">
                             <h3>Barbershop</h3>
                             <p>Сайт салона красоты.<br>
  Для мужчин, да.</p>
@@ -127,7 +135,7 @@
                     <li class="products-item">
                         <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
                         <img src="img/product-mishka.jpg" width="360" height="580" alt="Шаблон сайта «‎Mishka»">
-                        <div class="product-info">
+                        <div class="product-info visually-hidden">
                             <h3>Mishka</h3>
                             <p>Интернет-магазин<br>
  вязаных игрушек</p>
@@ -137,7 +145,7 @@
                     <li class="products-item">
                         <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
                         <img src="img/product-a-plus.jpg" width="360" height="580" alt="Шаблон сайта «‎School»">
-                        <div class="product-info">
+                        <div class="product-info visually-hidden">
                             <h3>A Plus</h3>
                             <p>Лендинг курсов<br>
 повышения квалификации</p>
@@ -147,7 +155,7 @@
                     <li class="products-item">
                         <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
                         <img src="img/product-kwast.jpg" width="360" height="580" alt="Шаблон сайта «‎Kwas»">
-                        <div product-info>
+                        <div class="product-info visually-hidden">
                             <h3>Кваст</h3>
                             <p>Промо-сайт производителя <br>
 крафтового кваса</p>
@@ -157,7 +165,7 @@
                 </ul>
                 <div class="pagination">
                     <ul class="pagination-list">
-                        <li class="pagination-item-current">
+                        <li class="pagination-item current">
                             <a>1</a>
                         </li>
                         <li class="pagination-item">
