@@ -680,6 +680,7 @@ img {
     width: 100vw;
     margin-left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
 }
 
 .pagination {
@@ -762,9 +763,11 @@ img {
 
 .products-item svg{
     display: block;
+    opacity: 0.5;
 }
 
 .products-item {
+    position: relative;
     width: 360px;
     max-height: 620px;
     margin: 0;
@@ -782,27 +785,65 @@ img {
 }
 
 .product-info {
+    display: block;
+    position: absolute;
+    top: 389px;
+    left: 0;
     width: 360px;
+    opacity: 0;
     background-color: var(--basic-extra-light);
     text-align: center;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+
+}
+
+.products-item:hover .product-info {
+    display: block;
+    opacity: 1;
+    transition: all 0.5s linear;
+    overflow: hidden;
+}
+
+.products-item:hover svg {
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+
+.product-info {
+    padding-top: 26px;
+    padding-bottom: 44px;
+}
+
+.product-info a {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 17px 72px 15px 72px;
 }
 
 .product-info h3 {
+    display: inline-block;
     font-size: 18px;
+    line-height: 30px;
     text-transform: uppercase;
-    padding: 26px 0 6px 0;
+    padding-bottom: 12px;
     margin: 0 0;
+}
+
+.product-info h3:hover {
+    color: var(--basic-red);
+}
+
+.product-info h3:active {
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .product-info p {
     color: #666666;
-    padding: 6px 0 49px 0;
+    line-height: 18px;
+    padding-bottom: 32px;
     margin: 0 0;
-}
-
-.button.price {
-    padding: 17px 72px;
-    margin-bottom: 44px;
 }
 
 /* Filters */
@@ -846,7 +887,92 @@ img {
 .price legend {
     margin: 0;
     padding: 0;
-    margin-bottom: 48px;
+}
+
+.range-filter {
+    width: 260px;
+    margin-top: 48px;
+}
+
+.range-controls {
+    position: relative;
+    height: 41px;
+    background-color: var(--basic-extra-light);
+    margin-bottom: 14px;
+    border-radius: 3px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: #D7DCDF;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background-color: var(--basic-green);
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--basic-white);
+    background-color: #ababab;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    cursor: pointer;
+}
+
+.range-controls .toggle:focus {
+    outline: inherit;
+}
+
+.range-controls .toggle-min {
+    left: 18px;
+}
+
+.range-controls .toggle-max {
+    left: 160px;
+}
+
+.price-controls label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-controls input {
+    font-size: 16px;
+    font-family: inherit;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    width: 60px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--basic-extra-light);
+}
+
+.price-controls input:focus {
+    outline: inherit;
+}
+
+.price-controls input:active {
+    outline: inherit;
 }
 
 .grid-type legend {
@@ -877,6 +1003,83 @@ img {
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
     border-radius: 3px;
     color: rgba(1, 1, 1, 0.3);
+}
+
+.filter-option {
+    margin-bottom: 19px;
+    padding-left: 36px;
+}
+
+
+.filter-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-input-radio + label::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    width: 17px;
+    height: 17px;
+    border: 4px solid #4D4D4D;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.filter-input-radio:hover + label::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -27px;
+  width: 9px;
+  height: 9px;
+  background-color: #4D4D4D;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.filter-input-radio:checked:hover + label::after {
+    opacity: 1;
+}
+
+.filter-input-checkbox + label::before {
+    content: url("../img/checkbox-unselected.svg");
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    opacity: 0.4;
+}
+
+.filter-input-checkbox:hover + label::before {
+    opacity: 1;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: url("../img/checkbox-selected.svg");
+  position: absolute;
+  left: -35px;
+  width: 26px;
+  height: 23px;
+  background-color: var(--basic-white);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-input-checkbox:checked:hover + label::after {
+    content: url("../img/checkbox-selected-hover.svg");
+
 }
 
 /* Sort */
@@ -929,6 +1132,14 @@ img {
     padding: 0;
 }
 
+.sort a:hover {
+    color: rgba(1, 1, 1, 0.6);
+}
+
+.sort a:active {
+    color: rgba(1, 1, 1, 1);
+}
+
 .sort-list .current {
     color: var(--basic-black);
 }
@@ -937,15 +1148,29 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     width: 40px;
     height: 10px;
 }
 
 .sort-dir {
+    opacity: 0.2;
     margin: 0;
     padding: 0;
     border: none;
     background-color: var(--basic-white);
+}
+
+.sort-dir.hover {
+    opacity: 0.4;
+}
+
+.sort-dir:active {
+    opacity: 1;
+}
+
+.sort-dir.current {
+    opacity: 1;
 }
 
 /* Grid */
