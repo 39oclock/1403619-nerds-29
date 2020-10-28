@@ -36,24 +36,24 @@
             </nav>
         </header>
         <main class="container">
-            <section class="slider-wrapper">
-                <div class="slider">
+            <div class="slider-wrapper">
+                <section class="slider">
                     <ul class="sliders-list">
-                        <li class="slider-item slider1">
+                        <li class="slider-item slide slide-current">
                             <h2>Долго, дорого,<br>
                             скурпулезно</h2>
                             <p>Математически выверенный дизайн<br>
                             для вашего сайта или мобильного приложения.</p>
                             <a class="button" href="#">Узнать больше</a>
                         </li>
-                        <li class="slider-item slider2 visually-hidden">
+                        <li class="slider-item slide">
                             <h2>Любим математику<br>
                             как никто другой</h2>
                             <p>Никакого креатива, только математические формулы<br>
                             для расчета идеальных пропорций</p>
                             <a class="button" href="#">Узнать больше</a>
                         </li>
-                        <li class="slider-item slider3  visually-hidden">
+                        <li class="slider-item slide">
                             <h2>Только ночь,<br>
                             только хардкор</h2>
                             <p>Работать днем, как все? Мы против этого.<br>
@@ -61,8 +61,13 @@
                             <a class="button" href="#">Узнать больше</a>
                         </li>
                     </ul>
-                </div>
-            </section>
+                    <div class="slider-controls">
+                        <button type="button" aria-label="Первый слайд" class="current"></button>
+                        <button type="button" aria-label="Второй слайд"></button>
+                        <button type="button" aria-label="Третий слайд"></button>
+                    </div>
+                </section>
+            </div>
             <section class="services">
                 <h2 class="visually-hidden">Услуги</h2>
                 <div class="services-wrapper">
