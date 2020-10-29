@@ -203,19 +203,19 @@ img {
 .slider-item.slide:nth-child(1) {
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url("img/slider1.png") no-repeat right;
+    background: var(--basic-extra-light) url("../img/slider1.png") no-repeat right;
 }
 
 .slider-item.slide:nth-child(2) {
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url("img/slider2.png") no-repeat right;
+    background: var(--basic-extra-light) url("../img/slider2.png") no-repeat right;
 }
 
 .slider-item.slide:nth-child(3) {
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url("img/slider3.png") no-repeat right;
+    background: var(--basic-extra-light) url("../img/slider3.png") no-repeat right;
 }
 
 .slider-controls {
@@ -426,6 +426,11 @@ img {
     vertical-align: middle;
 }
 
+.about-services-list li {
+    display: flex;
+    align-items: center;
+}
+
 .about h2 {
     font-size: 45px;
     line-height: 45px;
@@ -443,6 +448,7 @@ img {
     color: var(--basic-extra-black);
     margin: 0;
     margin-bottom: 23px;
+    margin-top: 40px;
 }
 
 .about p {
@@ -451,7 +457,7 @@ img {
     font-weight: 400;
     text-transform: none;
     color: var(--basic-extra-dark);
-    margin: 0 0 40px 0;
+    margin: 0 0;
 }
 
 .about a{
@@ -679,7 +685,7 @@ img {
     margin-right: 139px;
 }
 
-.social-icon-item {
+.social-icon-item a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -696,11 +702,11 @@ img {
     align-items: center;
 }
 
-.social-icon-item:hover {
+.social-icon-item:hover a {
     background-color: var(--basic-red);
 }
 
-.social-icon-item:active {
+.social-icon-item:active a {
     background-color: var(--special-red-active);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
@@ -916,20 +922,22 @@ img {
     padding: 17px 72px 15px 72px;
 }
 
-.product-info h3 {
+.product-name {
     display: inline-block;
+    color: var(--basic-black);
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
+    font-weight: 700;
     padding-bottom: 12px;
     margin: 0 0;
 }
 
-.product-info h3:hover {
+.product-name:hover {
     color: var(--basic-red);
 }
 
-.product-info h3:active {
+.product-name:active {
     color: var(--basic-black);
     opacity: 0.3;
 }
@@ -1281,6 +1289,7 @@ img {
 /* Modal */
 
 .modal {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -1295,7 +1304,6 @@ img {
 /* Modal contact*/
 
 .modal-contact {
-    display: none;
     bottom: 180px;
     left: 240px;
     right: 240px;
@@ -1323,6 +1331,35 @@ img {
 }
 
 .login-form #contact-name,
+.login-form #contact-email,
+.login-form #contact-message {
+    outline: none;
+}
+
+.login-form #contact-name:hover,
+.login-form #contact-email:hover,
+.login-form #contact-message:hover {
+    background-color: var(--basic-white);
+    border: 2px solid #B4B9BB;
+}
+
+.login-form #contact-name:active,
+.login-form #contact-email:active,
+.login-form #contact-message:active {
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-black);
+    color: var(--basic-black);
+}
+
+.login-form  #contact-name:focus,
+.login-form #contact-email:focus,
+.login-form #contact-message:focus {
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-black);
+    color: var(--basic-black);
+}
+
+.login-form #contact-name,
 .login-form #contact-email {
     display: flex;
     box-sizing: border-box;
@@ -1342,6 +1379,7 @@ img {
 .login-form #contact-message {
     display: flex;
     box-sizing: border-box;
+    flex-wrap: wrap;
     width: 760px;
     padding-top: 16px;
     padding-left: 16px;
@@ -1387,4 +1425,12 @@ img {
     width: 21px;
     height: 21px;
     content: url("../img/close-cross.svg")
+}
+
+.modal-close:hover {
+    opacity: 0.3;
+}
+
+.modal-close:active {
+    opacity: 0.1;
 }
