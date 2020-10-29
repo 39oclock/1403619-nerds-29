@@ -606,7 +606,7 @@ img {
 
 .map-wrapper {
     background-color: var(--basic-extra-light);
-    min-height: 416px;
+    height: 416px;
 }
 
 .contact-details {
@@ -663,6 +663,7 @@ img {
     padding: 0;
     padding-top: 69px;
     padding-bottom: 70px;
+    background-color: var(--basic-white);
 }
 
 .main-footer .container {
