@@ -600,6 +600,7 @@ img {
 /* Контакты */
 
 .map {
+    position: relative;
     background-color: var(--basic-extra-light);
 }
 
@@ -609,20 +610,36 @@ img {
 }
 
 .contact-details {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: absolute;
     margin: 0 0;
     margin-top: 54px;
     margin-bottom: 54px;
-    padding: 49px 39px 52px 50px;
+    margin-left: 140px;
+    width: 219px;
+    height: 212px;
+    padding: 49px 50px 47px 50px;
     background-color: var(--basic-white);
-    margin-right: 841px;
+}
+
+.contact-details a {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .contact-details h3 {
     text-transform: uppercase;
     color: inherit;
+    font-size: 18px;
+    line-height: 30px;
     padding: 0 0;
     margin: 0 0;
+    margin-bottom: 23px;
 }
 
 .contact-details #tel {
@@ -632,8 +649,11 @@ img {
 }
 
 .contact-details p {
+    line-height: 18px;
     color: #666666;
-    margin: 22px 0 54px 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 37px;
 }
 
 /* Main footer */
@@ -646,30 +666,53 @@ img {
 }
 
 .main-footer .container {
-  display: grid;
-  grid-template-columns: 258px max-content;
+  display: flex;
+  align-items: center;
 }
 
 .social-icons-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 261px;
     list-style: none;
     padding: 0 0;
     margin: 0 0;
-    height: auto;
-    list-style: none;
+    margin-right: 139px;
 }
 
 .social-icon-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 0;
     padding: 0 0;
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    background-color: #E1E1E1;
 }
 
+.social-icon-item a {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon-item:hover {
+    background-color: var(--basic-red);
+}
+
+.social-icon-item:active {
+    background-color: var(--special-red-active);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.social-icon-item:active svg {
+    opacity: 0.3;
+}
 
 .promo {
-    display: block;
-    margin-left: 140px;
+    padding: 0;
+    margin: 0;
 }
 
 .main-footer ul {
@@ -764,7 +807,6 @@ img {
     box-sizing: border-box;
     align-items:center;
     justify-content: center;
-
 }
 
 .pagination-item.large a {
@@ -789,7 +831,6 @@ img {
     text-align: center;
     line-height: 18px;
 }
-
 
 /*Products */
 
@@ -851,7 +892,6 @@ img {
     text-align: center;
     overflow: hidden;
     border-radius: 0 0 5px 5px;
-
 }
 
 .products-item:hover .product-info {
@@ -1066,7 +1106,6 @@ img {
     padding-left: 36px;
 }
 
-
 .filter-option label {
     position: relative;
     display: block;
@@ -1135,7 +1174,6 @@ img {
 
 .filter-input-checkbox:checked:hover + label::after {
     content: url("../img/checkbox-selected-hover.svg");
-
 }
 
 /* Sort */
@@ -1176,7 +1214,6 @@ img {
     padding: 0;
     margin-left: 266px;
     margin-right: 47px;
-
 }
 
 .sort a {
@@ -1236,8 +1273,119 @@ img {
 }
 
 .page-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+
+/* Modal contact*/
+
+.modal-contact {
+    display: none;
+    bottom: 180px;
+    left: 240px;
+    right: 240px;
+    transform: translate(0%, 15%);
+    top: auto;
+    padding: 65px 99px 82px 100px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal-contact h2 {
+    font-size: 45px;
+    line-height: 53px;
+}
+
+/* Contact form*/
+
+.login-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.login-form p {
+    margin: 0;
+}
+
+.login-form #contact-name,
+.login-form #contact-email {
+    display: flex;
+    box-sizing: border-box;
+    width: 360px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 34px;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    border: 2px solid #D7DCDE;
+    border-radius: 3px;
+}
+
+.login-form #contact-message {
+    display: flex;
+    box-sizing: border-box;
+    width: 760px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 84px;;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    border: 2px solid #D7DCDE;
+    border-radius: 3px;
+    margin-bottom: 47px;
+}
+
+.login-form label {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.login-form button {
+    padding: 17px 83px 15px 83px;
+}
+
+/* Modal close */
+
+.modal-close {
+    position: absolute;
+    top: 80px;
+    right: 90px;
+    width: 21px;
+    height: 21px;
+    background-color: var(--basic-white);
+    border: 0;
+    cursor: pointer;
+}
+
+.modal-close::before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 21px;
+    height: 21px;
+    content: url("../img/close-cross.svg")
 }
