@@ -216,7 +216,7 @@ img {
 .slider-item.slide:nth-child(1) {
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url("../img/slider1.png") no-repeat right;
+    background: var(--basic-extra-light) url("../slider-1.jpg") no-repeat right;
 }
 
 .slider-item.slide:nth-child(2) {
