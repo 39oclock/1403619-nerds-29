@@ -216,7 +216,7 @@ img {
 .slider-item.slide:nth-child(1) {
     max-width: 1157px;
     height: 431px;
-    background: var(--basic-extra-light) url("../slider-1.jpg") no-repeat right;
+    background: var(--basic-extra-light) url("../img/slider1.png") no-repeat right;
 }
 
 .slider-item.slide:nth-child(2) {
@@ -409,6 +409,7 @@ img {
 .services a {
     display: inline-block;
     vertical-align: middle;
+    font-weight: 500;
 }
 
 /* Visually hidden */
@@ -1414,7 +1415,7 @@ img {
 .modal {
     display: none;
     position: fixed;
-    top: 0;
+    top: 140px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -1423,13 +1424,122 @@ img {
     background-color: var(--basic-white);
 }
 
+/* Modal basket*/
+
+.basket {
+    display: none;
+    margin: auto;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.modal-basket {
+    position: absolute;
+    top: 125px;
+    right: 140px;
+    width: 455px;
+    height: 240px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+    background-color: var(--basic-white);
+}
+
+.modal-basket h2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+.modal-basket h2::before {
+    content: url("../img/basket.svg");
+    position: relative;
+    width: 20px;
+    height: 20px;
+    padding-right: 15px;
+}
+
+.modal-basket h2::after {
+    content: " ";
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    width: 375px;
+    height: 2px;
+    background-color: var(--basic-extra-light);
+}
+
+.modal-basket p {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 95px;
+    padding-right: 96px;
+    padding-top: 72px;
+}
+
+.basket-close {
+    position: absolute;
+    top: 45px;
+    right: 40px;
+    width: 21px;
+    height: 21px;
+    background-color: var(--basic-white);
+    border: 0;
+    cursor: pointer;
+}
+
+.basket-close::before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 21px;
+    height: 21px;
+    content: url("../img/close-cross.svg")
+}
+
+.basket-close:hover {
+    opacity: 0.3;
+}
+
+.basket-close:active {
+    opacity: 0.1;
+}
+
+.basket-close:focus {
+    opacity: 0.1;
+    outline: none;
+}
+
+/* Basket show */
+
+.basket-show {
+    display: block;
+    animation: slide-basket 0.8s;
+}
+
+/* Modal show & error */
+
+.modal-show {
+    display: block;
+    animation: bounce 0.8s;
+}
+
+.modal-error {
+    animation: shake 0.8s;
+}
+
 
 /* Modal contact*/
 
 .modal-contact {
     top: 0;
     left: 0;
-    transform: translate(-50%.-50%);
     width: 960px;
     height: 590px;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
@@ -1450,7 +1560,7 @@ img {
 
 /* Contact form*/
 
-.login-form {
+.contact-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1459,40 +1569,39 @@ img {
     height: 353px;
 }
 
-.login-form p {
+.contact-form p {
     margin: 0;
 }
 
-.login-form #contact-name,
-.login-form #contact-email,
-.login-form #contact-message {
+.contact-form #contact-name,
+.contact-form #contact-email,
+.contact-form #contact-message {
     outline: none;
 }
 
-.login-form #contact-name:hover,
-.login-form #contact-email:hover,
-.login-form #contact-message:hover {
+.contact-form #contact-name:hover,
+.contact-form #contact-email:hover,
+.contact-form #contact-message:hover {
     background-color: var(--basic-white);
     border: 2px solid #B4B9BB;
-    color: red;
 }
 
-.login-form #contact-name:focus::placeholder,
-.login-form #contact-email:focus::placeholder,
-.login-form #contact-message:focus::placeholder {
+.contact-form #contact-name:focus::placeholder,
+.contact-form #contact-email:focus::placeholder,
+.contact-form #contact-message:focus::placeholder {
     color: var(--basic-black);
 }
 
-.login-form  #contact-name:focus,
-.login-form #contact-email:focus,
-.login-form #contact-message:focus {
+.contact-form  #contact-name:focus,
+.contact-form #contact-email:focus,
+.contact-form #contact-message:focus {
     background-color: var(--basic-white);
     border: 2px solid var(--basic-black);
     color: var(--basic-black);
 }
 
-.login-form #contact-name,
-.login-form #contact-email {
+.contact-form #contact-name,
+.contact-form #contact-email {
     display: flex;
     box-sizing: border-box;
     flex-grow: 1 1;
@@ -1512,7 +1621,7 @@ img {
     border-radius: 3px;
 }
 
-.login-form #contact-message {
+.contact-form #contact-message {
     display: flex;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -1528,7 +1637,7 @@ img {
     margin-bottom: 47px;
 }
 
-.login-form label {
+.contact-form label {
     display: inline-block;
     vertical-align: middle;
     font-size: 16px;
@@ -1537,7 +1646,8 @@ img {
     margin-bottom: 9px;
 }
 
-.login-form button {
+.button.send {
+    outline: none;
     padding: 17px 83px 15px 83px;
 }
 
@@ -1569,4 +1679,58 @@ img {
 
 .modal-close:active {
     opacity: 0.1;
+}
+
+.modal-close:focus {
+    opacity: 0.1;
+    outline: none;
+}
+
+/* Animations */
+
+@keyframes slide-basket {
+
+    from {left: 2000px;}
+    to {left: 845px;}
+
+@keyframes bounce {
+
+    0% {
+        transform: translateY(2000px);
+    }
+
+    70% {
+        transform: translateY(-30px);
+    }
+
+    90% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
