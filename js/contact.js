@@ -41,7 +41,7 @@ contactForm.addEventListener("submit", function (evt) {
     contactPopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("contact", contactForm.value);
+      localStorage.setItem("message", contactPopup.value);
     }
   }
 });

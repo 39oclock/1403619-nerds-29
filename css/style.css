@@ -1534,7 +1534,6 @@ img {
     animation: shake 0.8s;
 }
 
-
 /* Modal contact*/
 
 .modal-contact {
@@ -1692,25 +1691,6 @@ img {
 
     from {left: 2000px;}
     to {left: 845px;}
-
-@keyframes bounce {
-
-    0% {
-        transform: translateY(2000px);
-    }
-
-    70% {
-        transform: translateY(-30px);
-    }
-
-    90% {
-        transform: translateY(20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-
 }
 
 @keyframes shake {
