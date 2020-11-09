@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <title>Дизайн студия «‎Nerds»</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/style.min.css" rel="stylesheet">
     </head>
     <body>
-        <header class="main-header catalog">
+        <header class="main-header">
             <nav class="main-navigation">
                 <div class="main-navigation-wrapper">
                     <div class="container">
@@ -41,7 +41,7 @@
             </div>
                 <section class="filters">
                     <h2 class="visually-hidden">Фильтр</h2>
-                    <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                    <form class="filter" method="get" action="https://echo.htmlacademy.ru" target="_blank">
                         <fieldset class="price">
                             <legend>Стоимость:</legend>
                             <div class="range-filter">
@@ -66,40 +66,41 @@
                             <legend>Сетка:</legend>
                             <ul>
                                 <li class="filter-option filter-radio">
-                                    <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="adaptive" id="grid-adaptive">
+                                    <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="adaptive" id="grid-adaptive" tabindex="1">
                                     <label for="grid-adaptive">Адаптивная</label>
                                 </li>
                                 <li class="filter-option filter-radio">
-                                    <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="fixed" id="grid-fixed">
+                                    <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="fixed" id="grid-fixed" tabindex="1">
                                     <label for="grid-fixed">Фиксированная</label>
                                 </li>
                                 <li class="filter-option filter-radio">
-                                    <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="rubber" id="grid-rubber">
+                                    <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="rubber" id="grid-rubber" tabindex="1">
                                     <label for="grid-rubber">Резиновая</label>
                                 </li>
+
                             </ul>
                         </fieldset>
                         <fieldset class="additional-advantages">
                             <legend>Особенности:</legend>
                             <ul class="advantages-list">
                                 <li class="filter-option filter-checkbox">
-                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-slider" checked>
+                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-slider" checked tabindex="2">
                                     <label for="advantage-slider">Слайдер</label>
                                 </li>
                                 <li class="filter-option filter-checkbox">
-                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-block">
+                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-block" tabindex="2">
                                     <label for="advantage-block">Блок преимуществ</label>
                                 </li>
                                 <li class="filter-option filter-checkbox">
-                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-news" checked>
+                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-news" checked tabindex="2">
                                     <label for="advantage-news">Новости</label>
                                 </li>
                                 <li class="filter-option filter-checkbox">
-                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-gallery">
+                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-gallery" tabindex="2">
                                     <label for="advantage-gallery">Галерея</label>
                                 </li>
                                 <li class="filter-option filter-checkbox">
-                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-basket">
+                                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantages" id="advantage-basket" tabindex="2">
                                     <label for="advantage-basket">Корзина</label>
                                 </li>
                             </ul>
@@ -141,7 +142,7 @@
                             <div class="product-info">
                                 <a href="#"  class="product-name">Sedona</a>
                                 <p>Информационный сайт для&nbsp;туристов</p>
-                                <a href="#" class="button price">9 900 ₽</a>
+                                <a href="#" class="button price" aria-label="Добавить шаблон сайта «‎Sedona» в корзину">9 900 ₽</a>
                             </div>
                         </li>
                         <li class="products-item">
@@ -150,7 +151,7 @@
                             <div class="product-info">
                                 <a href="#"  class="product-name">Pink App</a>
                                 <p>Продуктовый лендинг приложения для&nbsp;iOS и&nbsp;Android</p>
-                                <a href="#" class="button price">9 900 ₽</a>
+                                <a href="#" class="button price" aria-label="Добавить шаблон сайта «‎Pink» в корзину">9 900 ₽</a>
                             </div>
                         </li>
                         <li class="products-item">
@@ -160,7 +161,7 @@
                                 <a href="#"  class="product-name">Barbershop</a>
                                 <p>Сайт салона красоты.<br>
 Для мужчин, да.</p>
-                                <a href="#" class="button price">9 900 ₽</a>
+                                <a href="#" class="button price" aria-label="Добавить шаблон сайта «‎Barbershop» в корзину">9 900 ₽</a>
                             </div>
                         </li>
                         <li class="products-item">
@@ -170,25 +171,25 @@
                                 <a href="#"  class="product-name">Mishka</a>
                                 <p>Интернет-магазин<br>
 вязаных игрушек</p>
-                                <a href="#" class="button price">9 900 ₽</a>
+                                <a href="#" class="button price" aria-label="Добавить шаблон сайта «‎Mishka» в корзину">9 900 ₽</a>
                             </div>
                         </li>
                         <li class="products-item">
                             <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
-                            <img src="img/product-a-plus.jpg" width="360" height="580" alt="Шаблон сайта «‎School»">
+                            <img src="img/product-a-plus.jpg" width="360" height="580" alt="Шаблон сайта «‎A Plus»">
                             <div class="product-info">
                                 <a href="#"  class="product-name">A Plus</a>
                                 <p>Лендинг курсов повышения квалификации</p>
-                                <a href="#" class="button price">9 900 ₽</a>
+                                <a href="#" class="button price" aria-label="Добавить шаблон сайта «‎A Plus» в корзину">9 900 ₽</a>
                             </div>
                         </li>
                         <li class="products-item">
                             <svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm19 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm16.95-3.5a7 7 0 1 0 12.13-7 7 7 0 0 0-12.13 7z" fill="#4D4D4D"/></svg>
-                            <img src="img/product-kwast.jpg" width="360" height="580" alt="Шаблон сайта «‎Kwas»">
+                            <img src="img/product-kwast.jpg" width="360" height="580" alt="Шаблон сайта «‎Kwast»">
                             <div class="product-info">
                                 <a href="#" class="product-name">Кваст</a>
                                 <p>Промо-сайт производителя  крафтового кваса</p>
-                                <a href="#" class="button price">9 900 ₽</a>
+                                <a href="#" class="button price" aria-label="Добавить шаблон сайта «‎Kwast» в корзину">9 900 ₽</a>
                             </div>
                         </li>
                     </ul>
@@ -274,8 +275,8 @@
             <button class="basket-close" type="button" aria-label="Закрыть"></button>
         </section>
 
-        <script src="js/contact.js"></script>
-        <script src="js/basket.js"></script>
+        <script src="js/contact.min.js"></script>
+        <script src="js/basket.min.js"></script>
 
     </body>
 </html>
